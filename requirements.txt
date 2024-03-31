@@ -1,0 +1,5 @@
+azure-core
+azure-ai-textanalytics
+azure-identity
+azure-keyvault-secrets
+python-dotenv
