@@ -3,8 +3,8 @@ USAGE:
     python ai_services_authentication.py
 
     Set the environment variables with your own values before running the sample:
-    1) AZURE_LANGUAGE_URL - the endpoint to your Language resource.
-    2) AZURE_LANGUAGE_KEY - your Language API key
+    1) AZURE_AI_SERVICES_URL - the endpoint to your azure ai resource.
+    2) AZURE_AI_SERVICES_KEY - your azure ai API key
     3) AZURE_CLIENT_ID - the client ID of your active directory application.
     4) AZURE_TENANT_ID - the tenant ID of your active directory application.
     5) AZURE_CLIENT_SECRET - the secret of your active directory application.
@@ -24,8 +24,8 @@ def authentication_with_api_key() -> None:
     from dotenv import load_dotenv
     load_dotenv()
 
-    endpoint = os.environ["AZURE_LANGUAGE_URL"]
-    key = os.environ["AZURE_LANGUAGE_KEY"]
+    endpoint = os.environ["AZURE_AI_SERVICES_URL"]
+    key = os.environ["AZURE_AI_SERVICES_KEY"]
 
     text_analytics_client = TextAnalyticsClient(endpoint, AzureKeyCredential(key))
 
@@ -56,7 +56,7 @@ def authentication_with_azure_active_directory() -> None:
     from dotenv import load_dotenv
     load_dotenv()
 
-    endpoint = os.environ["AZURE_LANGUAGE_URL"]
+    endpoint = os.environ["AZURE_AI_SERVICES_URL"]
     credential = DefaultAzureCredential()
 
     text_analytics_client = TextAnalyticsClient(endpoint, credential=credential)
@@ -87,7 +87,7 @@ def authentication_with_api_key_from_vault() -> None:
     load_dotenv()
 
     key_vault_url = os.environ["AZURE_KEYVAULT_URL"]
-    text_analytics_url = os.environ["AZURE_LANGUAGE_URL"]
+    ai_services_url = os.environ["AZURE_AI_SERVICES_URL"]
 
     credential = DefaultAzureCredential()
     client = SecretClient(vault_url=key_vault_url, credential=credential)
@@ -96,7 +96,7 @@ def authentication_with_api_key_from_vault() -> None:
     secret = client.get_secret(secret_name)
     key = secret.value
 
-    text_analytics_client = TextAnalyticsClient(text_analytics_url, AzureKeyCredential(key))
+    text_analytics_client = TextAnalyticsClient(ai_services_url, AzureKeyCredential(key))
 
     # Japanese text
     doc = [

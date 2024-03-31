@@ -1,5 +1,7 @@
 azure-core
-azure-ai-textanalytics
 azure-identity
 azure-keyvault-secrets
+azure-ai-textanalytics
+azure-ai-formrecognizer
 python-dotenv
+requests
