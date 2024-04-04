@@ -3,5 +3,7 @@ azure-identity
 azure-keyvault-secrets
 azure-ai-textanalytics
 azure-ai-formrecognizer
+azure-ai-vision-imageanalysis
 python-dotenv
 requests
+opencv-python

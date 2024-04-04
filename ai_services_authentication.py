@@ -92,7 +92,7 @@ def authentication_with_api_key_from_vault() -> None:
     credential = DefaultAzureCredential()
     client = SecretClient(vault_url=key_vault_url, credential=credential)
 
-    secret_name = "TextAnalyticsKey"
+    secret_name = "ai-services-key"
     secret = client.get_secret(secret_name)
     key = secret.value
 

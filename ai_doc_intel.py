@@ -1,6 +1,6 @@
 """
 USAGE:
-    python ai_services_authentication.py
+    python ai_doc_intel.py
 
     Set the environment variables with your own values before running the sample:
     1) AZURE_AI_SERVICES_URL - the endpoint to your azure ai resource.
