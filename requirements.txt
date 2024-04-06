@@ -4,6 +4,10 @@ azure-keyvault-secrets
 azure-ai-textanalytics
 azure-ai-formrecognizer
 azure-ai-vision-imageanalysis
+azure-cognitiveservices-vision-customvision
+azure-cognitiveservices-vision-face
+cognitive-face
 python-dotenv
 requests
 opencv-python
+numpy
