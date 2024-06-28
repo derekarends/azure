@@ -1,11 +1,14 @@
 azure-core
 azure-identity
 azure-keyvault-secrets
+azure-ai-contentsafety
 azure-ai-textanalytics
 azure-ai-formrecognizer
 azure-ai-vision-imageanalysis
+azure-ai-translation-text
 azure-cognitiveservices-vision-customvision
 azure-cognitiveservices-vision-face
+azure-cognitiveservices-speech
 cognitive-face
 python-dotenv
 requests

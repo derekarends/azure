@@ -1,3 +1,15 @@
+"""
+    detect_language()
+    sentiment_analysis()
+    recognize_entities()
+    linked_entities()
+    recognized_pii()
+    get_key_phrases()
+    healthcare_analysis()
+    multi_analysis()
+
+    pip install azure-ai-textanalytics
+"""
 import os
 
 from azure.core.credentials import AzureKeyCredential
@@ -7,6 +19,7 @@ load_dotenv()
 
 endpoint = os.environ["AZURE_AI_SERVICES_URL"]
 key = os.environ["AZURE_AI_SERVICES_KEY"]
+
 text_analytics_client = TextAnalyticsClient(endpoint, AzureKeyCredential(key))
 
 

@@ -14,6 +14,8 @@ USAGE:
     VisualFeatures.PEOPLE: Returns the bounding box for detected people
     VisualFeatures.SMART_CROPS: Returns the bounding box of the specified aspect ratio for the area of interest
     VisualFeatures.READ: Extracts readable text
+
+    pip install azure-ai-vision-imageanalysis
 """
 import os
 import cv2
@@ -156,5 +158,5 @@ def get_words():
 
 if __name__ == "__main__":
     # get_objects()
-    get_caption()
-    # get_words()
+    # get_caption()
+    get_words()
